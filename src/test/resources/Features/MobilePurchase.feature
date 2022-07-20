@@ -19,17 +19,17 @@
 Feature: Mobile Purchase
   I want to use this template for my feature file
 
-  Scenario: Mobile
+  Background: 
     Given user launches flipkart application
     And user login to flipkart
+	@smoke
+  Scenario: Mobile
     When user search mobile
     And user choose the mobile and doing payments
     Then user receive order confirmation message
     And user quit the launches
-
+	@smoke @sanity
   Scenario: Mobile one dimension list
-    Given user launches flipkart application
-    And user login to flipkart
     When user search mobile by using one dimensional list
       | Realme Mobiles | iphone | Vivo Mobiles |
     And user choose the mobile and doing payments
@@ -37,8 +37,6 @@ Feature: Mobile Purchase
     And user quit the launches
 
   Scenario: Mobile one dimension map
-    Given user launches flipkart application
-    And user login to flipkart
     When user search mobile by using one dimensional map
       | Phone1 | Realme Mobiles |
       | Phone2 | iphone         |
@@ -48,8 +46,6 @@ Feature: Mobile Purchase
     And user quit the launches
 
   Scenario Outline: Mobile
-    Given user launches flipkart application
-    And user login to flipkart
     When user search mobile "<Phones>"
     And user choose the mobile and doing payments
     Then user receive order confirmation message

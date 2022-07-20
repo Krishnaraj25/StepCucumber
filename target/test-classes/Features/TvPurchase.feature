@@ -16,20 +16,21 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+@Tv
 Feature: Tv Purchase
   I want to use this template for my feature file
 
-  Scenario: Tv
+  Background: 
     Given user launches flipkart application
     And user login to flipkart
+
+  Scenario: Tv
     When user search Tv
     And user choose the Tv and doing payments
     Then user receive order confirmation message
     And user quit the launches
 
   Scenario: Tv one dimension list
-    Given user launches flipkart application
-    And user login to flipkart
     When user search Tv by using one dimensional list
       | Realme Tv | Sony Tv | SAMSUNG Tv |
     And user choose the Tv and doing payments
@@ -37,8 +38,6 @@ Feature: Tv Purchase
     And user quit the launches
 
   Scenario: Tv one dimension map
-    Given user launches flipkart application
-    And user login to flipkart
     When user search Tv by using one dimensional map
       | Tv1 | Realme Tv  |
       | Tv2 | Sony Tv    |
@@ -48,8 +47,6 @@ Feature: Tv Purchase
     And user quit the launches
 
   Scenario Outline: Tv
-    Given user launches flipkart application
-    And user login to flipkart
     When user search Tv "<Tv>"
     And user choose the Tv and doing payments
     Then user receive order confirmation message
