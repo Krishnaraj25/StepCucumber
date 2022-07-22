@@ -16,6 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+@mobile
 Feature: Mobile Purchase
   I want to use this template for my feature file
 
