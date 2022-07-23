@@ -12,25 +12,26 @@ public class MobilePurchasePage extends CommonAction {
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//button[text()='✕']")
-	public WebElement login ;
+	private WebElement login ;
 	@FindBy(xpath="//input[@type='text']")
-	public WebElement Search;
+	private WebElement Search;
 	@FindBys({
 		@FindBy(xpath="//input[@type='text']"),
 		@FindBy(name="q")
 	})
-	public WebElement AndSearch;
+	private WebElement AndSearch;
 	@FindAll({
 		@FindBy(xpath="//input[@type='text']"),
 		@FindBy(name="q")
 	})
-	public WebElement OrSearch;
+	private WebElement OrSearch;
 	@FindBy(xpath="(//div[@class='_4rR01T'])[1]")
-	public WebElement Mob1;
+	private WebElement Mob1;
 	@FindBy(xpath="(//div[@class='_4rR01T'])[2]")
-	public WebElement Mob2;
+	private WebElement Mob2;
 	@FindBy(xpath="(//div[@class='_4rR01T'])[3]")
-	public WebElement Mob3;
+	private WebElement Mob3;
+	
 	public WebElement getLogin() {
 		return login;
 	}
